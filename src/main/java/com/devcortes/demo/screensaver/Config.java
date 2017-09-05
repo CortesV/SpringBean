@@ -1,6 +1,11 @@
 package com.devcortes.demo.screensaver;
 
+import com.devcortes.demo.beans.ConfigAnnotation;
+import com.devcortes.demo.beans.Greeting;
+import com.devcortes.demo.beans.LifecycleProcessor;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.context.support.AbstractApplicationContext;
 
 import java.awt.*;
 import java.util.Random;
@@ -27,10 +32,16 @@ public class Config {
     }
 
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("Starting annotation configuration...");
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(Config.class);
-        while(true){
+        AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigAnnotation.class);
+        Greeting greetingService = annotationConfigApplicationContext.getBean(Greeting.class);
+        System.out.println(greetingService.sayGreeting());
+        LifecycleProcessor lifecycleProcessor = applicationContext.getBean(LifecycleProcessor.class);
+        applicationContext.registerShutdownHook();
+        /*while(true){
             annotationConfigApplicationContext.getBean(ColorFrame.class).showOnRandomPlace();
             Thread.sleep(100);
-        }
+        }*/
     }
 }
