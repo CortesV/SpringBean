@@ -11,7 +11,7 @@
 	First name: <%= ((Student)request.getAttribute("student")).getFirstName() %>
 	<br><br>
 	Last name: <%= ((Student)request.getAttribute("student")).getLastName() %>
-	${student.lastName}
 	<br><br>
+	Country: ${student.country}
 </body>
 </html>
