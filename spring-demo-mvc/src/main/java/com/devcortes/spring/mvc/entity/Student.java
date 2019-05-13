@@ -1,6 +1,7 @@
 package com.devcortes.spring.mvc.entity;
 
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 public class Student {
 
@@ -8,6 +9,7 @@ public class Student {
 	private String lastName;
 	private String country;
 	private String favoriteLanguage;
+	private Set<String> operatingSystems;
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> favoriteLanguageOptions;
 	
@@ -77,6 +79,14 @@ public class Student {
 
 	public void setFavoriteLanguageOptions(LinkedHashMap<String, String> favoriteLanguageOptions) {
 		this.favoriteLanguageOptions = favoriteLanguageOptions;
+	}
+	
+	public Set<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(Set<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 
 	@Override
