@@ -36,6 +36,8 @@
 		Groovy <form:radiobutton path="favoriteLanguage" value="Groovy"/>
 		C++ <form:radiobutton path="favoriteLanguage" value="C++"/>
 		<br><br>
+		<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"/>
+		<br><br>
 		<input type="submit" value="Submit"/>
 	</form:form>
 </body>
