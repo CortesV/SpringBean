@@ -13,5 +13,7 @@
 	Last name: <%= ((Student)request.getAttribute("student")).getLastName() %>
 	<br><br>
 	Country: ${student.country}
+	<br><br>
+	Favorite language: ${student.favoriteLanguage}
 </body>
 </html>
