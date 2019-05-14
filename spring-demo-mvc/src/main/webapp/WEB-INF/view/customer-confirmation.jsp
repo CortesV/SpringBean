@@ -11,5 +11,7 @@
 	First name: ${customer.firstName}
 	<br/><br/><br/>
 	Last name: ${customer.lastName}
+	<br/><br/><br/>
+	Free passes: ${customer.freePasses}
 </body>
 </html>
