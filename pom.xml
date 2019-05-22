@@ -50,6 +50,5 @@
       <module>spring-demo-mvc</module>
       <module>spring-xml</module>
     <module>spring-annotations</module>
-    <module>spring-boot-mvc</module>
   </modules>
 </project>
