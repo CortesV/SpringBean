@@ -13,5 +13,7 @@
 	Last name: ${customer.lastName}
 	<br/><br/><br/>
 	Free passes: ${customer.freePasses}
+	<br/><br/><br/>
+	Postal code: ${customer.postalCode}
 </body>
 </html>
