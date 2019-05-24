@@ -3,6 +3,7 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<P>The time on the server is ${serverTime}.</p>
+<p>The time on the server is ${serverTime}.</p>
+<a href="main-menu">Show Forms</a>
 </body>
 </html>
