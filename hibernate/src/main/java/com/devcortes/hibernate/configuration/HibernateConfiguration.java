@@ -44,7 +44,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com/devcortes/hibernate/entity");
+        sessionFactory.setPackagesToScan("com.devcortes.hibernate.entity");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

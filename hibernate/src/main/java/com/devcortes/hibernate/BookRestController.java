@@ -43,7 +43,7 @@ public class BookRestController {
     }
 
     @DeleteMapping("")
-    public ResponseEntity<?> delete(Book book) {
+    public ResponseEntity<?> delete(@RequestBody Book book) {
         bookService.delete(book);
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
