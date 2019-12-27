@@ -30,8 +30,8 @@ public class BookDao implements IBook {
     @Override
     public Book readById(Integer id) {
         Session currentSession = sessionFactory.getCurrentSession();
-        currentSession.get(Book.class, id);
-        return null;
+        Book book = currentSession.get(Book.class, id);
+        return book;
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
