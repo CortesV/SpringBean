@@ -47,3 +47,4 @@ public class Author {
     @Column(name = "version")
     @JsonProperty(value = "version")
     private LocalDateTime version;
+}
