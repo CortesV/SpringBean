@@ -22,7 +22,7 @@ public class BookDao implements IBook {
     @Override
     public List<Book> getAll() {
         Session currentSession = sessionFactory.getCurrentSession();
-        List books = currentSession.createQuery("from Book ").list();
+        List<Book> books = (List<Book>) currentSession.createQuery("from Book ").list();
         return books;
     }
 
