@@ -2,6 +2,8 @@ package com.devcortes.hibernate.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,6 +29,7 @@ public class Client {
     private String name;
     private int age;
 
-    @OneToMany(mappedBy = "client"/*, orphanRemoval = true*/)
+    @OneToMany(mappedBy = "client", orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.EXTRA)
     private List<Account> accounts = new ArrayList<>();
 }
