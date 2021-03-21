@@ -1,0 +1,68 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.devcortes.reservation_service.grpc;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+message ReservationRequest {
+    int64 reservationId = 1;
+}
+
+message Reservation {
+    int32 id = 1;
+    int32 parentId = 2;
+    int32 organizationId = 3;
+    int32 agentId = 4;
+    int32 customerId = 5;
+    int32 serviceId = 6;
+    int32 actorId = 7;
+    int32 productId = 8;
+    string altPartyId = 9;
+    string altId = 10;
+    int32 financeId = 11;
+    string name = 12;
+    string state = 13;
+    string flat = 14;
+    string market = 15;
+    string outcome = 16;
+    string unit = 17;
+    string arrivalTime = 18;
+    string departureTime = 19;
+    string serviceFrom = 20;
+    string serviceTo = 21;
+    google.protobuf.Timestamp date = 22;
+    google.protobuf.Timestamp fromDate = 23;
+    google.protobuf.Timestamp toDate = 24;
+    google.protobuf.Timestamp dueDate = 25;
+    google.protobuf.Timestamp doneDate = 26;
+    double deposit = 27;
+    int32 adult = 28;
+    int32 child = 29;
+    int32 infant = 30;
+    int32 quantity = 31;
+    double price = 32;
+    double quote = 33;
+    double cost = 34;
+    double extra = 35;
+    string currency = 36;
+    string cardholder = 37;
+    string cardNumber = 38;
+    string cardMonth = 39;
+    string cardYear = 40;
+    string cardCode = 41;
+    string servicePayer = 42;
+    bool termsAccepted = 43;
+    string notes = 44;
+    int64 groupId = 45;
+    google.protobuf.Timestamp version = 46;
+}
+
+message ReservationList {
+    repeated Reservation reservations = 1;
+}
+
+service GrpcReservationService {
+    rpc getById(ReservationRequest) returns (Reservation);
+    rpc getAll(google.protobuf.Empty) returns (ReservationList);
+}

@@ -1,0 +1,23 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.devcortes.oauth2jwtresource.configuration.SecurityProperties",
+      "name": "security",
+      "type": "com.devcortes.oauth2jwtresource.configuration.SecurityProperties"
+    },
+    {
+      "sourceType": "com.devcortes.oauth2jwtresource.configuration.SecurityProperties",
+      "name": "security.jwt",
+      "sourceMethod": "getJwt()",
+      "type": "com.devcortes.oauth2jwtresource.configuration.SecurityProperties$JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.devcortes.oauth2jwtresource.configuration.SecurityProperties$JwtProperties",
+      "name": "security.jwt.public-key",
+      "type": "org.springframework.core.io.Resource"
+    }
+  ]
+}

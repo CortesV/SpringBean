@@ -17,5 +17,7 @@
         <module>Spring-Cloud</module>
         <module>Spring-Reactive</module>
         <module>Simple-Spring</module>
+        <module>Spring-Auth</module>
+        <module>Microservices</module>
     </modules>
 </project>
