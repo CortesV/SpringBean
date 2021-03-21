@@ -49,6 +49,6 @@
   <modules>
       <module>spring-demo-mvc</module>
       <module>spring-xml</module>
-    <module>spring-annotations</module>
+	  <module>spring-annotations</module>
   </modules>
 </project>
