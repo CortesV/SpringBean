@@ -19,5 +19,7 @@
         <module>Simple-Spring</module>
         <module>Spring-Auth</module>
         <module>Microservices</module>
+        <module>Communication</module>
+        <module>Spring-Data</module>
     </modules>
 </project>
